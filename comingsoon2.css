@@ -1,0 +1,11 @@
+html, body {
+    height: 100%;
+}
+body {
+    background-image: url("ChatGPT Image May 18, 2026, 12_21_01 AM.png");
+     height: 100%;
+    width: 100%;
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
