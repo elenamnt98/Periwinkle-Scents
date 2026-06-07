@@ -24,6 +24,8 @@ display: flex;
   border-radius: 25px;
 min-width: 0;
 width: 100%;
+justify-content: center;
+align-items: center;
 }
 
 * {
