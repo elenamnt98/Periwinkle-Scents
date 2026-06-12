@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body {
+  min-height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background:
+
+    /* 1. Η diagonal λωρίδα */
+    linear-gradient(
+      100deg,
+      transparent 10%,
+      rgba(255, 210, 225, 0.04) 35%,
+      rgba(255, 214, 228, 0.12) 50%,
+      rgba(255, 223, 234, 0.08) 60%,
+      rgba(255, 214, 228, 0.12) 70%,
+      rgba(255, 210, 225, 0.04) 100%,
+      transparent 65%
+    ),
+
+    /* 2. Το μικρό ροζ νέφος πάνω δεξιά */
+    radial-gradient(
+  ellipse at 70% 0%,
+  rgba(255, 220, 230, 0.18) 0%,
+  rgba(255, 220, 230, 0.08) 20%,
+  transparent 60%
+),
+
+    /* 3. Το βασικό periwinkle gradient */
+    linear-gradient(
+      90deg,
+      #4537a2 0%,
+      #5b52ae 28%,
+      #5b52ae 55%,
+      #584faa 78%,
+      #372d93 100%
+    ),
+
+     radial-gradient(
+  circle at 35% 60%,
+  rgba(255,230,240,0.08),
+  transparent 30%
+),
+
+radial-gradient(
+  circle at 60% 80%,
+  rgba(220,210,255,0.10),
+  transparent 25%
+);
+
+  background-attachment: fixed;
+
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      circle at 88% 10%,
+      rgba(255, 225, 230, 0.18),
+      transparent 20%
+    );
+ z-index: 1;
+ position: fixed;
+
+  body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      circle at 30% 30%,
+      rgba(255,255,255,0.04),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 70% 70%,
+      rgba(255,220,240,0.05),
+      transparent 30%
+    );
+
+  filter: blur(80px);
+  opacity: 0.8;
+
+  opacity: 0.12;
+mix-blend-mode: soft-light;
+}
+min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.thank-you-message {
+  max-width: 500px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#moon-icon {
+  width: 180px;
+  margin-bottom: 2rem;
+  position: fixed;
+  top: 4vw;
+  right: 10vw;
+ opacity: 0.3;
+mix-blend-mode: soft-light;}
+
+* {font-family: "Bodoni Moda", serif;
+   text-transform: none;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  color: #D8C2A5;;
+  margin-bottom: 1rem;
+  text-shadow:
+    0 1px 2px rgba(95, 83, 106, 0.08),
+    0 4px 14px rgba(216, 194, 165, 0.08);
+}
+
+p {
+  line-height: 1.8;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #D8C2A5;
+  text-shadow:
+    0 1px 2px rgba(95, 83, 106, 0.08),
+    0 4px 14px rgba(216, 194, 165, 0.08);
+}
+
+    </style>
+</head>
+<body>
+  <img src="moon.png" alt="moon icon" id="moon-icon">
+  <section class="thank-you-message">
+
+  <h1>You're on the list</h1>
+
+  <p>
+    Thank you for joining Periwinkle Scents.
+    You'll be the first to know when our dreamy rituals arrive.
+  </p>
+
+</section>  
+</body>
+</html>
