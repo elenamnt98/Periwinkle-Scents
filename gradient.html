@@ -26,19 +26,18 @@ body {
       rgba(255, 210, 225, 0.04) 100%,
       transparent 65%
     ),
-
     /* 2. Το μικρό ροζ νέφος πάνω δεξιά */
     radial-gradient(
-  ellipse at 70% 0%,
+  ellipse at 65% 0%,
   rgba(255, 220, 230, 0.18) 0%,
   rgba(255, 220, 230, 0.08) 20%,
-  transparent 60%
+  transparent 99%
 ),
 
     /* 3. Το βασικό periwinkle gradient */
     linear-gradient(
       90deg,
-      #4537a2 0%,
+      #4841a5 0%,
       #5b52ae 28%,
       #5b52ae 55%,
       #584faa 78%,
@@ -76,35 +75,25 @@ body::before {
  z-index: 1;
  position: fixed;
 
-  body::after {
+}
+
+body::after {
   content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
 
   background:
-    radial-gradient(
-      circle at 30% 30%,
-      rgba(255,255,255,0.04),
-      transparent 25%
-    ),
-    radial-gradient(
-      circle at 70% 70%,
-      rgba(255,220,240,0.05),
-      transparent 30%
+    linear-gradient(
+      120deg,
+      transparent 20%,
+      rgba(255, 235, 245, 0.03) 35%,
+      rgba(255, 245, 250, 0.08) 50%,
+      rgba(255, 220, 235, 0.04) 62%,
+      transparent 78%
     );
 
-  filter: blur(80px);
-  opacity: 0.8;
-
-  opacity: 0.12;
-mix-blend-mode: soft-light;
-}
-min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  mix-blend-mode: screen;
 }
 
 .thank-you-message {
@@ -122,18 +111,19 @@ min-height: 100vh;
   position: fixed;
   top: 4vw;
   right: 10vw;
- opacity: 0.3;
+ opacity: 0.2;
 mix-blend-mode: soft-light;}
 
 * {font-family: "Bodoni Moda", serif;
    text-transform: none;
+   line-height: 1.1
 }
 
 h1 {
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 300;
   letter-spacing: 0.06em;
-  color: #D8C2A5;;
+  color: #bca381;
   margin-bottom: 1rem;
   text-shadow:
     0 1px 2px rgba(95, 83, 106, 0.08),
@@ -144,7 +134,7 @@ p {
   line-height: 1.8;
   font-size: 1rem;
   margin-bottom: 2rem;
-  color: #D8C2A5;
+  color: #bca381;
   text-shadow:
     0 1px 2px rgba(95, 83, 106, 0.08),
     0 4px 14px rgba(216, 194, 165, 0.08);
