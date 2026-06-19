@@ -1,22 +1,42 @@
-const options = {
-  method: 'GET',
-  headers: {
-    'X-RapidAPI-Key': process.env.API_KEY,
-    'X-RapidAPI-Host': 'yh-finance.p.rapidapi.com',
-  },
-};
-
 exports.handler = async function (event, context) {
-  const { ticker } = event.queryStringParameters;
 
-  const response = await fetch(
-    `https://yh-finance.p.rapidapi.com/stock/v2/get-summary?symbol=${ticker}&region=US`,
-    options
-  );
-  const stockSummary = await response.json();
+  const { email } = JSON.parse(event.body);
 
-  return {
-    statusCode: 200,
-    body: JSON.stringify({ stockSummary }),
-  };
+  try {
+    const response = await fetch(
+      "https://connect.mailerlite.com/api/subscribers",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json",
+          "Authorization":
+            `Bearer ${process.env.MAILERLITE_API_KEY}`
+        },
+
+        body: JSON.stringify({
+          email,
+          groups: ["190434567091389758"]
+        })
+      }
+    );
+
+    const data = await response.json();
+    console.log("STATUS:", response.status);
+    console.log("DATA:", data);
+
+    return {
+      statusCode: 200,
+      body: JSON.stringify(data)
+    };
+
+  } catch (error) {
+
+    return {
+      statusCode: 500,
+      body: JSON.stringify({
+        error: error.message
+      })
+    };
+  }
 };
