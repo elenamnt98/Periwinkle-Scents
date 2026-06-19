@@ -27,7 +27,10 @@ https://yourwebsite.com
 
 ## 📸 Preview
 
-(Add screenshots here)
+<img width="1170" height="2532" alt="vq1MJD-0" src="https://github.com/user-attachments/assets/68241c93-70dd-4273-8f77-b69b247af896" />
+<img width="1170" height="2532" alt="4MA68us_" src="https://github.com/user-attachments/assets/c28d8dcf-b3ed-496f-8ef7-fc6463b162e5" />
+
+
 
 ## ⚙️ How it works
 
