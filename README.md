@@ -71,7 +71,6 @@ MAILERLITE_API_KEY=your_api_key
 - Analytics dashboard
 - A/B testing
 
-## 👩‍💻 Author
 
 ## 💡 What I Learned
 
@@ -82,5 +81,7 @@ During this project I learned how to:
 - Secure API keys using environment variables
 - Integrate a third-party REST API
 - Deploy full-stack applications with Netlify
+
+## 👩‍💻 Author
 
 Made with ☕ and lavender by Elena Mundo.
